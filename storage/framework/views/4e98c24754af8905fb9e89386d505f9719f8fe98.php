@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\studybox\resources\views/users/faculties/all_faculties.blade.php ENDPATH**/ ?>
