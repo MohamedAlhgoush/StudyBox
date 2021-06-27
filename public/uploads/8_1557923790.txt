@@ -1,0 +1,21 @@
+
+    public function singleUpload($faculty_id,$major_id,$course_id,$upload_id) {
+        $single_upload = Upload::find($upload_id);
+        $faculty=Faculty::find($faculty_id);
+        $major=Major::find($major_id);
+        $course=Course::find($course_id);
+        if($single_upload){
+            $file = $single_upload->files;
+        }
+        return response()->json(array('file'=>$file,
+                                      'upload'=>$single_upload,
+                                      'major'=>$major,
+                                      'course'=>$course,
+                                      'faculty'=>$faculty,)
+    
+      
+    );
+
+
+
+$router->get('/singleUpload/{id}/{id1}/{id2}/{id3}','UploadController@singleUpload');
